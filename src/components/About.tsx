@@ -33,7 +33,15 @@ export default function About() {
                     {ITEMS.map((item, i) => (
                         <span className="marquee-item" key={i}>
                             {item}
-                            <span className="marquee-dot" />
+                            <span className="marquee-diamond">◆</span>
+                        </span>
+                    ))}
+                </div>
+                <div className="marquee-track marquee-track-reverse">
+                    {ITEMS.map((item, i) => (
+                        <span className="marquee-item" key={i}>
+                            {item}
+                            <span className="marquee-diamond">◆</span>
                         </span>
                     ))}
                 </div>
@@ -43,6 +51,9 @@ export default function About() {
             <section className="about" id="about" ref={sectionRef}>
                 {/* Visuals */}
                 <div className="about-visual reveal reveal-left">
+                    {/* Gold corner frame */}
+                    <span className="about-corner about-corner--tl" aria-hidden="true" />
+                    <span className="about-corner about-corner--br" aria-hidden="true" />
                     <img
                         src="https://i.postimg.cc/HkJ129wJ/disha-new.avif"
                         alt="Disha Beria - Interior Designer"

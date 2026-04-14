@@ -5,6 +5,9 @@ export default function Hero() {
         <section className="hero" id="home">
             {/* Left content */}
             <div className="hero-left">
+                {/* Decorative vertical bar */}
+                <div className="hero-vbar" aria-hidden="true" />
+
                 {/* Location badge */}
                 <div className="hero-location-badge">
                     <span className="hero-location-dot" />
@@ -16,7 +19,7 @@ export default function Hero() {
 
                 <h1 className="hero-title">
                     Transform Your<br />
-                    <em>Dream</em><br />
+                    <em className="hero-title-gradient">Dream</em><br />
                     Spaces
                 </h1>
                 <p className="hero-desc">
@@ -74,8 +77,9 @@ export default function Hero() {
                     { num: '40+', label: 'Projects Completed' },
                     { num: '3+', label: 'Years Experience' },
                     { num: '25+', label: 'Happy Clients' },
-                ].map(stat => (
+                ].map((stat, i) => (
                     <div className="hero-stat" key={stat.label}>
+                        {i > 0 && <span className="hero-stat-sep" aria-hidden="true" />}
                         <span className="hero-stat-num">{stat.num}</span>
                         <span className="hero-stat-label">{stat.label}</span>
                     </div>

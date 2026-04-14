@@ -57,6 +57,7 @@ export default function Testimonials() {
 
     return (
         <section className="testimonials" id="testimonials" ref={sectionRef}>
+            <div className="testimonials-backdrop-quote" aria-hidden="true">"</div>
             <div className="testimonials-header">
                 <p className="section-eyebrow reveal" style={{ justifyContent: 'center' }}>Client Stories</p>
                 <h2 className="section-title reveal reveal-delay-1">
@@ -65,7 +66,7 @@ export default function Testimonials() {
             </div>
 
             <div className="testimonials-slider reveal reveal-delay-2">
-                <div className="testimonial-card" key={current} style={{ animation: 'fadeUp 0.6s cubic-bezier(0.16,1,0.3,1)' }}>
+                <div className="testimonial-card testimonial-card--accented" key={current} style={{ animation: 'fadeUp 0.6s cubic-bezier(0.16,1,0.3,1)' }}>
                     <div className="testimonial-quote-mark">"</div>
                     <p className="testimonial-text">{t.text}</p>
                     <div className="testimonial-author">

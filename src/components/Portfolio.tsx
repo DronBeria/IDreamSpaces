@@ -106,6 +106,7 @@ export default function Portfolio() {
                         className={`portfolio-item reveal reveal-delay-${(i % 3) + 1}`}
                         key={project.id}
                     >
+                        <span className="portfolio-item-num">{String(i + 1).padStart(2, '0')}</span>
                         <img
                             src={project.img}
                             alt={project.name}

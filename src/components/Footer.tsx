@@ -25,6 +25,9 @@ export default function Footer() {
 
     return (
         <footer className="footer">
+            {/* Large decorative wordmark */}
+            <div className="footer-wordmark" aria-hidden="true">IDreamSpaces</div>
+
             <div className="footer-top">
                 {/* Brand */}
                 <div>
@@ -119,22 +122,23 @@ export default function Footer() {
 
             <div className="footer-bottom">
                 <p className="footer-copy">
-                    © {new Date().getFullYear()} IDreamSpaces. Made with{' '}
-                    <Heart size={12} style={{ display: 'inline', color: '#ef4444', fill: '#ef4444', verticalAlign: 'middle', margin: '0 2px' }} />{' '}
-                    by{' '}
+                    © {new Date().getFullYear()} IDreamSpaces · All rights reserved.
+                </p>
+                <div className="footer-agency">
+                    <span className="footer-agency-label">Designed &amp; Developed by</span>
                     <a
                         href="https://www.instagram.com/dron_beria?igsh=MWM0czc2ejNyaTR0dA=="
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ color: 'var(--gold)', textDecoration: 'none', transition: 'color 0.3s' }}
+                        className="footer-agency-name"
                     >
+                        <Heart size={10} style={{ display: 'inline', color: 'var(--gold)', fill: 'var(--gold)', verticalAlign: 'middle', marginRight: '4px' }} />
                         Dron Beria
                     </a>
-                    {' '}· 7896986480
-                </p>
+                </div>
                 <div className="footer-legal">
-                    <a href="#" className="footer-legal-link">Privacy Policy</a>
-                    <a href="#" className="footer-legal-link">Terms of Service</a>
+                    <a href="#" className="footer-legal-link">Privacy</a>
+                    <a href="#" className="footer-legal-link">Terms</a>
                 </div>
             </div>
         </footer>
